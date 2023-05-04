@@ -1,0 +1,19 @@
+*{
+    padding: auto;margin: 0;hex-sizing: border-box;
+}
+
+html{
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.header{
+    background-color: #f5f5f5;
+    margin: auto;padding: 10px 0px;
+    box-shadow:0 0 10px rgba(0,0,blue,aplha);
+}
+
+.header h1{
+    text-align: center;
+    color: #333;font-family: 'Courier New', Courier, monospace;
+    font-weight: 200;
+}
