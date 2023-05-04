@@ -3,12 +3,10 @@ import './App.css';
 
 import DeleteIcon from "@material-ui/icons/Delete";
 
-
 //import Header 
 import Header from '././compoents/Header';
 import CreateArea from './compoents/CreateArea';
 
-import { Note } from '@material-ui/icons';
 import Footer from './compoents/Footer';
 
 function App() {
@@ -22,11 +20,12 @@ function App() {
     }
   }
 
+  //delete note function by using filter method 
   const deleteNote = (id) => {
     setNotes((prevNotes) => {
       return prevNotes.filter((noteItem, index) => {
         return index !== id;
-      });
+      })
     });
   }
 
@@ -36,12 +35,12 @@ function App() {
       <CreateArea onAdd={addNote} />
 
       {
-        notes.map((noteItem, index) => {
+        notes.length>0 && notes.map((noteItem, index) => {
           return (
             <div key={index}>
               <h1>{noteItem.title}</h1>
               <p>{noteItem.content}</p>
-              <button onClick={deleteNote}><DeleteIcon /></button>
+              <button  onClick={deleteNote(index)}><DeleteIcon /></button>
               <hr />
             </div>
           )
